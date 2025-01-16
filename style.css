@@ -1,0 +1,101 @@
+body {
+    background-color: rgb(202, 229, 223);
+}
+
+.nav {
+    padding: 10px 30px;
+    margin: 10px;
+    border: 2px solid #232323;
+    border-radius: 5px;
+    background-color: rgb(5, 164, 111);
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-end;
+
+    font-weight: 300;
+    font-size: x-large;
+}
+
+.icon {
+    display: none;
+}
+
+.nav a:hover {
+    background-color: rgb(44, 235, 171);
+    padding: auto;
+    border: 1px solid #333;
+    border-radius: 3px;
+    color: rgb(206, 22, 22);
+}
+
+@media(max-width: 760px) {
+    .icon {
+        display: contents;
+    }
+
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-end;
+        justify-content: flex-end;
+        font-weight: 300;
+        font-size: x-large;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .icon:hover {
+        .menu {
+            display: block;
+        }
+    }
+
+}
+
+
+.ripple-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* .ripple-button:hover {
+    background-color: #87b2e1;
+    color: #0f0f0f;
+    transition: all 8s
+} */
+
+.ripple-button:focus {
+    box-shadow: 0 0 0 4px rgba(33, 92, 210, 0.5);
+}
+
+.ripple-button::before{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #80a8d2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+.ripple-button::after{
+    background-color: #2f83dd;
+    color: #0f0f0f;
+    transition: all 4s
+}
